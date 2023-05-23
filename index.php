@@ -15,9 +15,13 @@
         <div class="col">
 <?php
     require_once 'class/Db.php';
+    require_once  'class/Blog.php';
 
     $db = new Db('localhost', 'blog', 'root', "");
+    $blog = new Blog($db);
 
+
+    $blog->getPost(1) ;
 
 
 
