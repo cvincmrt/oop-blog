@@ -6,15 +6,18 @@ class Db
     protected $stm;
 
     /**
-     * @param $db
+     * @param $server
+     * @param $database
+     * @param $user
+     * @param $password
      */
     public function __construct($server, $database, $user, $password)
     {
         try {
             $this->db = new PDO("mysql:host=$server; dbname=$database; charset=UTF8", $user, $password);
-            if ($this->db){
-                //echo 'Som pripojeny k db....';
-            }
+           /* if ($this->db){
+               echo 'db is connect....';
+            }*/
         }
         catch (PDOException $e){
             echo $e->getMessage();
@@ -23,6 +26,7 @@ class Db
     }
 
     public function query($query, $data = []){
+
         $this->stm = $this->db->prepare($query);
         $this->stm->execute($data);
 

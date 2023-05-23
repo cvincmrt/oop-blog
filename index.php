@@ -21,7 +21,9 @@
     $blog = new Blog($db);
 
 
-    $blog->getPost(1) ;
+    $blog->getPostOne(1);
+    $blog->getPosts();
+
 
 
 
