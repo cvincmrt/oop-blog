@@ -13,17 +13,16 @@
 <div class="container">
     <div class="row">
         <div class="col">
-        <?php
+<?php
+    require_once 'class/Db.php';
+
+    $db = new Db('localhost', 'blog', 'root', "");
 
 
 
-        echo 'caerfegvgv4ru';
 
 
-
-
-
-        ?>
+?>
 
 
 
