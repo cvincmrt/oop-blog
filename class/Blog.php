@@ -18,7 +18,7 @@ class Blog
      * @return void
      */
     public function getPostOne($id){
-        $this->db->query("SELECT * FROM posts WHERE id = :id", ['id' => $id]);
+       return $this->db->query("SELECT * FROM posts WHERE id = :id", ['id' => $id]);
     }
 
     /**
@@ -26,7 +26,7 @@ class Blog
      * @return void
      */
     public function getPosts(){
-        $this->db->query("SELECT * FROM posts");
+        return $this->db->query("SELECT * FROM posts");
 
     }
 }

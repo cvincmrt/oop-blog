@@ -25,6 +25,15 @@ class Db
 
     }
 
+    /**
+     * @param $query
+     * @param $data
+     * @param prepare() mi nachysta SQL query ale bez konkretnych dat
+     * @param execute() dosadi konkretne data do SQL query
+     * @param fetchAll mi vrati pole objektov
+     * @param fetch mi vrati objekt
+     * @return array|false
+     */
     public function query($query, $data = []){
 
         $this->stm = $this->db->prepare($query);
